@@ -86,7 +86,7 @@ label {
     padding: 6px;
     background-color: #EEEEEE;
     margin-right: 50%;
- }
+}
 
 #items_table {
     font-family: "Century", serif;
@@ -100,4 +100,16 @@ label {
     font-size: 18px;
     margin-top: 0;
     font-family: "Century", serif;
+}
+
+.checkout {
+    margin: 0 auto;
+    left: 47%;
+    padding: 18px;
+    font-family: "Century", serif;
+    color: white;
+    font-size: 1.2em;
+    background-color: black;
+    -ms-transform: translateX(210%);
+    transform: translateX(210%);
 }
