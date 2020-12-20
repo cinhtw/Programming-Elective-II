@@ -20,13 +20,11 @@
         border: 0;">
     <div style="color: white; display: inline-block;">
         <button class="nav_item home"><a href="index.html" target="_self"> Home </a></button>
-        <button class="nav_item promo"> Promotions </button>
         <div class="currentpage menu"> Menu </div>
     </div>
     <div style="color: white; float: right">
-        <button class="nav_item cart"> Tray </button>
-        <button class="nav_item profile"> Name </button>
-        <button class="nav_item logout"> Log Out </button>
+        <button class="nav_item tray"><a href="tray.html" target="_self"> Tray </a></button>
+        <button class="nav_item login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> Login </button>
     </div>
 </div>
 
@@ -35,12 +33,14 @@
     <p> ___________________________________________ </p>
 </div>
 
-<div style="margin: 40px"><label>
-    <input type="text" name="search" onkeyup="myFunction()" placeholder="Search...">
-</label></div>
+<div style="margin: 40px">
+    <label>
+        <input class="search" type="text" name="search" placeholder="Search...">
+    </label>
+</div>
 
 <!-- Control buttons -->
-<div id="myBtnContainer" style="margin-top: 130px; align-content: center;">
+<div id="myBtnContainer" style="margin-top: 30px; align-content: center;">
     <button class="btn active" onclick="filterSelection('all')"> Show all</button>
     <button class="btn" onclick="filterSelection('chinese')"> Chinese Food </button>
     <button class="btn" onclick="filterSelection('western')"> Western Food </button>
@@ -48,7 +48,7 @@
     <button class="btn" onclick="filterSelection('bev')"> Beverages </button>
 </div>
 
-<div class="container" style="margin-left: 65px; margin-right: 65px; margin-top: 0; padding: 70px;
+<div class="cardcontainer" style="margin-left: 65px; margin-top: 0; padding: 65px;
     display: flex; -webkit-flex-direction: row; -webkit-flex-wrap: wrap;">
     <div class="card indian">
         <img src="static/images/Nasi Biryani.jpg" alt="Nasi Biryani" style="width:250px; height: 350px; object-fit: cover;">
@@ -81,6 +81,32 @@
         <p>Product Description</p>
         <p><button>Add to Tray</button></p>
     </div>
+</div>
+
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+            <img src="static/images/profile.png"" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" id="logintext" placeholder="Enter Username" name="uname" required>
+
+            <label><b>Password</b></label>
+            <input type="password" id="loginpassword" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" id="loginbutton">Login</button>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
 </div>
 
 <!--Footer-->
