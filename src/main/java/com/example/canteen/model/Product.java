@@ -1,4 +1,4 @@
-package com.example.canteen;
+package com.example.canteen.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Admin Page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <form action="/add" method="POST">
+    <form action="#" th:action="@{/addProduct}" th:object="${product}" method="POST">
     <p>Let's add a product.</p>
 
     <div>
@@ -23,7 +23,7 @@
 
 
 
-    <form action="/list" method="GET">
+    <form action="#" th:action="@{/getProducts}" th:object="${product}" method="GET">
         <button>List products</button>
     </form>
 </body>
